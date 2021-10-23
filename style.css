@@ -9,17 +9,21 @@
 body {
   --black: #202024;
   --gray: #e1e1e6;
-  background-color: var(--black);
   color: var(--gray);
+  background-color: var(--black);
 }
 
 main {
-  width: 21.5rem;
-  margin: 7rem auto;
+  max-width: 375px;
+  height: 812px;
+  background-image: url(imagens/background.svg);
+  background-size: auto;
+  margin: 3rem auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 0 3px 0px;
 }
 
 main #avatar {
@@ -28,6 +32,10 @@ main #avatar {
   object-fit: cover;
   clip-path: circle(50% at 50% 50%);
   margin-bottom: 2rem;
+}
+
+main #avatar img {
+  width: 100%;
 }
 
 main #informations {

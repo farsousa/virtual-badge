@@ -1,4 +1,4 @@
-const username = 'AndersonCaj26'
+const username = 'farsousa'
 const url = `https://api.github.com/users/${username}`
 
 fetch(url)

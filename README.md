@@ -1,3 +1,3 @@
-# Meu Portfólio
+# Crachá da NLW Heat 2021
 
-Projeto para apresentar a minha jornada na área da computação.
+Projeto da NLW Heat 2021 para servir como crachá virtual. As informações do perfil (foto, link e descrição) são extraídas da API do github.

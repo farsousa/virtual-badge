@@ -13,4 +13,4 @@
 
 ## Link
 
-- Are you curious to see it? Please [click here](https://farsousa.github.io/cracha-nlw-heat/).
+- Are you curious to see it? Please [click here](https://farsousa.github.io/virtual-badge/).

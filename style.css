@@ -6,32 +6,52 @@
   font-family: 'Nunito';
 }
 
-body {
+:root {
   --black: #202024;
   --gray: #e1e1e6;
+  --darkblack: #121214;
+}
+
+body {
   color: var(--gray);
-  background-color: var(--gray);
+  background-color: var(--black);
+}
+
+#degrade1 {
+  display: none;
+}
+
+#degrade2 {
+  display: none;
+}
+
+#faixa {
+  display: none;
+}
+
+#quebra {
+  display: none;
 }
 
 main {
-  max-width: 375px;
+  width: 375px;
   height: 812px;
-  background-image: url(imagens/background.svg);
-  background-size: auto;
-  margin: 0 auto;
+  margin: 20px auto;
+  background-image: url(imagens/background-mobile.svg);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 0 3px 0px;
+  box-shadow: 0 0 5px 2px;
 }
 
 main #avatar {
   width: 10rem;
   height: 10rem;
   object-fit: cover;
-  clip-path: circle(50% at 50% 50%);
+  clip-path: polygon(50% 1%, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
   margin-bottom: 2rem;
+  margin-top: -26px;
 }
 
 main #avatar img {
@@ -63,8 +83,72 @@ main #links {
   gap: 0.5rem;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 560px) {
   main {
-    margin: 5rem auto;
+    margin: 60px auto;
+    width: 358px;
+    height: 540px;
+    background-image: url(imagens/background-desktop.svg);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  main #avatar {
+    margin-top: 20px;
+  }
+
+  #degrade1 {
+    display: block;
+    background-image: url(imagens/degrade1.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    width: 1118px;
+    height: 1118px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-40%);
+    z-index: -1;
+  }
+
+  #degrade2 {
+    display: block;
+    background-image: url(imagens/degrade2.svg);
+    background-repeat: no-repeat;
+    width: 1118px;
+    height: 1118px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-60%);
+    z-index: -1;
+  }
+
+  #faixa {
+    background-image: url(imagens/faixa.svg);
+    background-size: cover;
+    width: 64px;
+    height: 120px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    box-shadow: 0 0 2px 0;
+  }
+
+  #quebra {
+    width: 80px;
+    height: 8px;
+    background-color: var(--darkblack);
+    display: block;
+    z-index: 1;
+    position: absolute;
+    top: 118px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 2px 0;
   }
 }
